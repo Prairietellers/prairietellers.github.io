@@ -282,6 +282,39 @@
         a:hover {
             color: var(--primary-color);
         }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #000;
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .video-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 0 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -358,26 +391,48 @@
         <section id="stories" class="section">
             <div class="content-wrapper">
                 <h2 class="section-title">Sample Stories</h2>
-                <ul class="story-list">
-                    <li class="story-item">
-                        <a href="https://youtu.be/BdfcpbrJLd4">Little Pullet</a>
-                    </li>
-                    <li class="story-item">
-                        <a href="https://youtu.be/xwW1A3a7438">The Song In Your Heart</a>
-                    </li>
-                    <li class="story-item">
-                        <a href="https://youtu.be/hu5svTDSdzQ">Scrambled Eggs</a>
-                    </li>
-                    <li class="story-item">
-                        <a href="https://youtu.be/utJ31Qg5VOg">Christmas Stories</a>
-                    </li>
-                    <li class="story-item">
-                        <a href="https://youtu.be/gtMT1exPJRk">A King's Thanksgiving</a>
-                    </li>
-                    <li class="story-item">
-                        <a href="https://youtu.be/uu4pUqQ4vPs">A Festival of Lies</a>
-                    </li>
-                </ul>
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/BdfcpbrJLd4" title="Little Pullet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">Little Pullet</h4>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/xwW1A3a7438" title="The Song In Your Heart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">The Song In Your Heart</h4>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hu5svTDSdzQ" title="Scrambled Eggs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">Scrambled Eggs</h4>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/utJ31Qg5VOg" title="Christmas Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">Christmas Stories</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/gtMT1exPJRk" title="A King's Thanksgiving" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">A King's Thanksgiving</h4>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/uu4pUqQ4vPs" title="A Festival of Lies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="video-title">A Festival of Lies</h4>
+                    </div>
+                </div>
             </div>
         </section>
 
